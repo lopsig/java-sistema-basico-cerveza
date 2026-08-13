@@ -74,4 +74,27 @@ public class Maquina {
     public void llenarMaquina () {
         this.cantidadActual = this.capacidadMaxima - 100;
     }
+
+    public boolean recargarCerveza (double cantidad) {
+        double limitePermitido = capacidadMaxima - 100;
+
+        if (cantidadActual + cantidad <= limitePermitido) {
+            cantidadActual = cantidad + cantidadActual;
+            return true;
+        } else {
+          return false;
+        }
+    }
+
+    public double servirCerveza (double cantidad) {
+        if (cantidadActual >= cantidad ) {
+            cantidadActual = cantidadActual - cantidad;
+            double valor = cantidad * precioPorMl;
+            return valor;
+        } else {
+            return 0;
+        }
+    }
+
+
 }
