@@ -17,7 +17,7 @@ public class TestServirCervezaAI {
         // Se utiliza el constructor de 4 parámetros.
 
         // Configuración
-        Maquina maquina = new Maquina("IPA", "Cerveza artesanal IPA", 0.05, 5000.0);
+        Maquina maquina = new Maquina("001", "IPA", "Cerveza artesanal IPA", 0.05, 5000.0);
         maquina.recargarCerveza(1000.0); // Cantidad actual = 1000.0 ml
 
         double cantidadAServir = 300.0;
@@ -37,7 +37,7 @@ public class TestServirCervezaAI {
         // Valida el funcionamiento correcto al servir cerveza cuando se utiliza el constructor de 3 parámetros.
 
         // Configuración
-        Maquina maquina = new Maquina("Stout", "Cerveza artesanal negra", 0.04);
+        Maquina maquina = new Maquina("002", "Stout", "Cerveza artesanal negra", 0.04);
         maquina.llenarMaquina(); // Carga la máquina con capacidadMaxima - 100 (9900.0 ml)
 
         double cantidadInicial = maquina.getCantidadActual();
@@ -60,7 +60,7 @@ public class TestServirCervezaAI {
         // 2. Debe retornar 0 como valor a pagar.
 
         // Configuración
-        Maquina maquina = new Maquina("Pilsner", "Cerveza rubia", 0.03, 3000.0);
+        Maquina maquina = new Maquina("005", "Pilsner", "Cerveza rubia", 0.03, 3000.0);
         maquina.recargarCerveza(200.0); // Cantidad actual = 200.0 ml
 
         double cantidadAServir = 500.0; // Se solicitan más ml de los disponibles
@@ -79,7 +79,7 @@ public class TestServirCervezaAI {
         // Valida el caso límite donde la cantidad a servir es exactamente igual a la cantidad actual disponible.
 
         // Configuración
-        Maquina maquina = new Maquina("Red Ale", "Cerveza roja", 0.06, 2000.0);
+        Maquina maquina = new Maquina("003", "Red Ale", "Cerveza roja", 0.06, 2000.0);
         maquina.recargarCerveza(400.0); // Cantidad actual = 400.0 ml
 
         double cantidadAServir = 400.0;
@@ -100,7 +100,7 @@ public class TestServirCervezaAI {
         // 2. Mantenga la cantidad actual en 0.
 
         // Configuración
-        Maquina maquina = new Maquina("Wheat", "Cerveza de trigo", 0.05, 1000.0);
+        Maquina maquina = new Maquina("004", "Wheat", "Cerveza de trigo", 0.05, 1000.0);
         // No se realiza recarga, por defecto cantidadActual es 0.0
 
         // Ejecución

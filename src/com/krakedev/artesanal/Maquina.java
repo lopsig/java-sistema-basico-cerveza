@@ -7,8 +7,13 @@ public class Maquina {
     private double precioPorMl;
     private double capacidadMaxima;
     private double cantidadActual;
+    private String codigo;
 
     //GETTERS AND SETTERS
+    public String getCodigo() {
+        return codigo;
+    }
+
     public String getNombreCerveza() {
         return nombreCerveza;
     }
@@ -42,7 +47,8 @@ public class Maquina {
     }
 
     //CONSTRUCTORES
-    public Maquina (String nombreCerveza, String descripcionCerveza, double precioPorMl, double capacidadMaxima) {
+    public Maquina (String codigo, String nombreCerveza, String descripcionCerveza, double precioPorMl, double capacidadMaxima) {
+        this.codigo = codigo;
         this.nombreCerveza = nombreCerveza;
         this.descripcionCerveza = descripcionCerveza;
         this.precioPorMl = precioPorMl;
@@ -50,7 +56,8 @@ public class Maquina {
         this.cantidadActual = 0; //valor por defecto
     }
 
-    public Maquina (String nombreCerveza, String descripcionCerveza, double precioPorMl) {
+    public Maquina (String codigo, String nombreCerveza, String descripcionCerveza, double precioPorMl) {
+        this.codigo = codigo;
         this.nombreCerveza = nombreCerveza;
         this.descripcionCerveza = descripcionCerveza;
         this.precioPorMl = precioPorMl;
@@ -62,7 +69,8 @@ public class Maquina {
 
     //METODOS
     public void imprimir () {
-        String mensaje = "Nombre de Cerveza: " + nombreCerveza +
+        String mensaje = "Código: " + codigo +
+                "Nombre de Cerveza: " + nombreCerveza +
                 ", Descripción: " + descripcionCerveza +
                 ", Precio por ml: " + precioPorMl +
                 ", Capacidad Máxima: " + capacidadMaxima +
