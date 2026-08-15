@@ -3,7 +3,7 @@ package com.krakedev.artesanal;
 public class Cliente {
     private String nombre;
     private String cedula;
-    private String codigo;
+    private int codigo;
     private double totalConsumido;
 
     public Cliente (String nombre, String cedula) {
@@ -27,11 +27,11 @@ public class Cliente {
         this.cedula = cedula;
     }
 
-    public String getCodigo() {
+    public int getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(String codigo) {
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 

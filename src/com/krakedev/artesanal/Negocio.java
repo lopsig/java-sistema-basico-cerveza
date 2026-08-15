@@ -3,7 +3,7 @@ package com.krakedev.artesanal;
 public class Negocio {
     private String nombre;
     private Maquina maquinaA;
-    private int ultimoCodigo = 1000;
+    private int ultimoCodigo = 100;
 
 
 
@@ -33,7 +33,8 @@ public class Negocio {
     }
 
     public void asignarCodigoCliente (Cliente cliente) {
-
+        cliente.setCodigo(ultimoCodigo);
+        ultimoCodigo++;
     }
 
 
